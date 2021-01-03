@@ -9,12 +9,6 @@ body {
 }	
 
 
-#wrapper {	
-	width: 960px;
- 	margin: 0 auto;
- 	text-align: left;
-}	 
-
 
 #header {	
 	 color: #FFF;
@@ -39,26 +33,13 @@ li{
     border: 1px solid rgb(180, 180, 180);
     border-radius: 0.3rem;
     font-size: 0.5rem;
-    background-color: white;
-    color: grey;
 }
 
-li:hover{
-    cursor: pointer;
-    box-shadow: 0 0 3px black;
-    border: 1.5px solid blue;
-}
+
 
 h1 {
 	font-family: 'Source Code Pro', monospace;
 }
-
-
-
-#content {	color: #FFF;
- 	background-color:#E3372E;
- 	margin-left:320px;
-}	 
 
 .search-text{
 	margin-top: 10px;
@@ -113,17 +94,6 @@ div.col.forecast{
     padding: 0.5rem 0.5rem;
 }
 
-aside.container{
-    display: flex;
-	justify-content: center;
-	
-	
-}
-#forecast {	
-	color: rgb(14, 11, 11);
- 	
- 	
-}	 
 
 main > div.row{
     display: flex;
@@ -134,5 +104,5 @@ main > div.row{
 }
 
 @media screen and (min-width: 480px) {
-	
+
 }
