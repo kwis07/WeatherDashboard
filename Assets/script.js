@@ -268,10 +268,7 @@ $(document).ready(function(){
             city : $('#city-input').val(),
             country: countryCode,
         };
-        console.log(searchDetails);
-        searchHistory.push(searchDetails);
-        localStorage.setItem('searchHistory', JSON.stringify(searchHistory));
-        console.log(searchHistory);
+        
     }   
 
     function displayWeatherForecast(){
@@ -281,7 +278,7 @@ $(document).ready(function(){
             url : oneCallWeatherAPI,
             method : "GET"
         }).then(function(response){
-            console.log(response);
+            
             $('.today').text('Today, ');
             
             let currentTimeStamp = response.current.dt + response.timezone_offset - 28800;
@@ -350,7 +347,7 @@ $(document).ready(function(){
                 $(`#wind-${i+1}`).text(response.daily[i].wind_speed);
             }
         }).catch(function(error){
-            console.log(error);
+            
         })
     }
 
@@ -372,18 +369,12 @@ $(document).ready(function(){
             url: citySearchURL,
             method: "GET"
         }).then(function(response){
-            console.log(response);
-            console.log(response.coord.lat);
-            console.log(response.coord.lon);
+           
 
             $('.city-name').text(`${response.name}, ${response.sys.country}`)
             lat = response.coord.lat;
             lon = response.coord.lon;
-            console.log({lat});
-            console.log({lon});
-
             displayWeatherForecast();
-
             $('#city-input').val("");
             $('#country-input').val("");
 
@@ -400,26 +391,9 @@ $(document).ready(function(){
         })
     }
 
-    function lastCityForecast (event){
-        let lastCity = $(event.target).text().split(" ");
-        cityName = lastCity[0];
-        countryCode = lastCity[1];
-        getData();
-        
-    }
-
-    function displayLastSearchedCity (){
-        if(searchHistory.length !== 0){
-        let last = searchHistory.length - 1;
-        cityName = searchHistory[last].city;
-        countryCode = searchHistory[last].country;
-        getData();
-        }
-    }
  
     $('#search-button').on('click',function(event){
         event.preventDefault();
-        console.log(event);
         $('.container').removeAttr('style');
         $('#error-code').text("");
         $('#error-description').text("");
@@ -430,19 +404,10 @@ $(document).ready(function(){
         }else{
             countryCode = getCountryCode($('#country-input').val().toLowerCase());
         }
-        console.log(countryCode);
-
+       
         storeSearchData();
         getData();
-    })
 
-    $('#last-search-cities').on('click', function(event){
-        console.log(event);
-        $('.container').removeAttr('style');
-        $('#error-code').text("");
-        $('#error-description').text("");
-        $('.error').css('display','none');
-        lastCityForecast(event);
         
     });
 
