@@ -32,32 +32,6 @@ body {
     width: 100%;
 }
 
-
-#last-search{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    align-items:flex-start;
-    margin-top: 1rem;
-    width: 100%;
-}
-
-#clear-history{
-    margin-right: auto;
-}
-
-.lastSearch-title{
-    font-weight: 700;
-    text-decoration: underline;
-}
-#last-search-cities{
-    display:flex;
-    flex-wrap: wrap;
-    align-items: center;
-    margin-bottom: 0;
-    margin-left: 0;
-    
-}
 li{
     list-style-type: none;
     padding: 0.1rem 0.5rem;
@@ -158,3 +132,5 @@ main > div.row{
     padding: 0;
    
 }
+
+@media screen and (min-width: 480px) 
