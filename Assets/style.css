@@ -54,13 +54,6 @@ h1 {
     color:#333;
 } 
 
-.search-text .btn-search{
-	background-color:#7dabdb;
-	border:1px solid #FFF;
-	color:#FFF;
-	padding: 11px 22px;
-}
-
 #current-weather-col{
     text-align: center;
     border-radius: 0.5rem;
