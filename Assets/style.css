@@ -61,11 +61,6 @@ h1 {
 	padding: 11px 22px;
 }
 
-.search-text  .btn-search:hover{
-	background-color:#FFF;
-	color:#7dabdb;
-}
-
 #current-weather-col{
     text-align: center;
     border-radius: 0.5rem;
